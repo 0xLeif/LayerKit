@@ -1,3 +1,3 @@
 # LayerKit
 
-A description of this package.
+Have fun with [CALayers](https://developer.apple.com/documentation/quartzcore/calayer)!

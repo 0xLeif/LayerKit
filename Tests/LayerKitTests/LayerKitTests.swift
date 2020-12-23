@@ -2,14 +2,16 @@ import XCTest
 @testable import LayerKit
 
 final class LayerKitTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(LayerKit().text, "Hello, World!")
+    func testLayerBackgroundColor() {
+        XCTAssertEqual(
+            Layer(backgroundColor: UIColor.white.cgColor).backgroundColor,
+            Layer {
+                $0.background(color: UIColor.white.cgColor)
+            }.backgroundColor
+        )
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testLayerBackgroundColor", testLayerBackgroundColor),
     ]
 }
